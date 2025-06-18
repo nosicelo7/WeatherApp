@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainScreen">
 
-
+    <!--Image Background added to the screen-->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="440dp"
@@ -20,25 +20,239 @@
         app:layout_constraintVertical_bias="0.555"
         app:srcCompat="@drawable/sun" />
 
+    <!--Text View displays second screen title-->
+    <!--Unique text ID -->
+    <!--Text View displays the average temperature-->
+    <!--Text Size is set to 20sp-->
+
+    <!--EditText for user input-->
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
+        android:id="@+id/txtViewTitle"
+        android:layout_width="322dp"
+        android:layout_height="63dp"
+        android:text="Average temperature of the week."
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.002" />
+
+    <!--Unique editText ID-->
+    <!--Text has a hint so that the user knows what to enter-->
+    <!--User can only enter text-->
+
+    <!--Text View displays the average temperature-->
+    <EditText
+        android:id="@+id/editTxtDay"
+        android:layout_width="293dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="80dp"
+        android:ems="10"
+        android:hint="e.g Monday"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <!--Unique text ID -->
+    <!--Text View has a background color for visual appeal-->
+    <!--Text Size is set to 20sp-->
+
+    <!--Button to navigate to detail screen-->
+    <TextView
+        android:id="@+id/txtAvg"
+        android:layout_width="404dp"
+        android:layout_height="53dp"
+        android:background="#01579B"
+        android:text="The average temperature for today is: "
+        android:textColor="#FB8C00"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.833" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail Screeen"
+        android:backgroundTint="#FDD835"
+        android:textColor="#FF6F00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.926" />
+    <!--Unique button ID-->
+    <!--Text inside button describes what the button does-->
+    <!--Text has a background color for visual appeal-->
+    <!--Text Size is set to 20sp-->
+
+
+    <!--Unique button ID-->
+    <!--Text inside button describes what the button does-->
+    <!--Text has a background color for visual appeal-->
+    <!--Text Size is set to 20sp-->
+
+    <!--Button to navigate to exit screen-->
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#880E4F"
+        android:text="Clear Data"
+        android:textColor="#FF6F00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.746" />
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        android:backgroundTint="#E9552D"
+        android:textColor="#FDD835"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txtDay"
+        android:layout_width="217dp"
+        android:layout_height="27dp"
+        android:text="Enter day of the week"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064" />
+
+    <TextView
+        android:id="@+id/txtMinTemp"
+        android:layout_width="286dp"
+        android:layout_height="37dp"
+        android:text="Enter minimum temperature (C)"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.187" />
+
+    <EditText
+        android:id="@+id/editTxtMin"
+        android:layout_width="242dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:hint="e.g. 12"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.228" />
+
+    <TextView
+        android:id="@+id/txtMaxTemp"
+        android:layout_width="298dp"
+        android:layout_height="37dp"
+        android:text="Enter maximum temperature (C)"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.32" />
+
+    <EditText
+        android:id="@+id/editTxtMax"
+        android:layout_width="245dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="e.g. 25"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/btnExit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.392" />
+
+    <TextView
+        android:id="@+id/txtCondition"
+        android:layout_width="301dp"
+        android:layout_height="51dp"
+        android:text="What is the weather condition?"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/editTxtCondition"
+        android:layout_width="239dp"
+        android:layout_height="57dp"
         android:ems="10"
+        android:hint="e.g. Sunny"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/txtViewTitle"
+        app:layout_constraintVertical_bias="0.578" />
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/btnExit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Day"
+        android:backgroundTint="#324ca8"
+        android:textColor="#FF6F00"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.643" />
+    <!--Unique button ID-->
+    <!--Text inside button describes what the button does-->
+    <!--Text has a background color for visual appeal-->
+    <!--Text Size is set to 20sp-->
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
